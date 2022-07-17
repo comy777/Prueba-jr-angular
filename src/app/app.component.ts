@@ -24,6 +24,8 @@ export class AppComponent {
   }
   onFileChange(event:any) {
     const reader = new FileReader();
+    this.imageSrc = ''
+    this.data = []
     if(event.target.files && event.target.files.length) {
       this.dataFile = event.target.files[0]
       const {name} = event.target.files[0]
